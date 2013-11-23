@@ -260,6 +260,9 @@ public class FoAblak extends javax.swing.JFrame {
         // 1. Adatok kiolvasása a beviteli mezőkből (2db) és elhelyezésük változókban:
         String nev=tfTermekNeve.getText();
 int ar=Integer.parseInt(tfBeszerzesiAr.getText());
+termekek[termekekSzama] = new Termek(nev,ar);
+termekekSzama++;
+termekekModel.addRow(new Object[]{nev,ar});
         
         // 2. A kiolvasott adatok alapján a termekek és termekekSzama globális változók módosítása:
         // (ez a lépés összevonható az 1.-vel)
